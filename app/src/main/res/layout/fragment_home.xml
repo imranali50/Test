@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        app:liftOnScroll="false"
+        app:toolbarId="@+id/toolbar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            android:minHeight="@dimen/_200sdp"
+            app:contentScrim="#99FFFFFF"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snapMargins"
+            app:titleEnabled="false">
+
+            <fragment
+                android:id="@+id/mapHome"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainDash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_minus20sdp"
+        android:background="@drawable/home_back"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/clChildLocationView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/dialog_bg_low_corners"
+                        android:outlineAmbientShadowColor="@color/gradiant1"
+                        android:outlineSpotShadowColor="@color/gradiant1"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="6dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="@color/gradiant1"
+                        app:strokeWidth="1.5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_12sdp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/sivProfileImage"
+                                android:layout_width="@dimen/_48sdp"
+                                android:layout_height="@dimen/_48sdp"
+                                app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tvChildName"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:text="Heer Jack Some Whoe"
+                                        android:textColor="@color/text_black_color"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tvViewLocation"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/dialog_bg_10_corner"
+                                        android:backgroundTint="@color/gradiant1"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:paddingHorizontal="@dimen/_12sdp"
+                                        android:paddingVertical="@dimen/_4sdp"
+                                        android:text="View"
+                                        android:textColor="@color/text_black_color"
+                                        android:textSize="@dimen/_10sdp" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tvLocationChild"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:maxLines="3"
+                                    android:text="301 , Rachna Society , Gokul nagar, surat, Gujrat"
+                                    android:textColor="@color/text_black_color"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvMostUseApp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:elevation="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="Most Uses Apps"
+                        android:textColor="@color/text_black_color"
+                        android:textSize="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/clChildLocationView" />
+
+                    <TextView
+                        android:id="@+id/tvSeeAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:elevation="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="See All"
+                        android:textColor="@color/description_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/clChildLocationView" />
+
+                    <RelativeLayout
+                        android:id="@+id/llMostUseApp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/dialog_bg_low_corners"
+                        android:elevation="12dp"
+                        app:layout_constraintTop_toBottomOf="@+id/tvMostUseApp">
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerEffect"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <include layout="@layout/shimmer_app_list_horizontal" />
+
+
+                            </LinearLayout>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvMostUsageApp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:orientation="horizontal"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/most_use_item" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvDriveSafe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:elevation="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="Drive Safety"
+                        android:textColor="@color/text_black_color"
+                        android:textSize="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/llMostUseApp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clSpeedMeter"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:elevation="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/dialog_bg_low_corners"
+                        android:backgroundTint="@color/otp_pin_color"
+                        android:paddingEnd="@dimen/_12sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDriveSafe">
+
+                        <ImageView
+                            android:id="@+id/ivSpeed"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:src="@drawable/speed_meter"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="@id/ivSpeed"
+                            app:layout_constraintEnd_toEndOf="@id/ivSpeed"
+                            app:layout_constraintStart_toStartOf="@id/ivSpeed"
+                            app:layout_constraintTop_toTopOf="@id/ivSpeed">
+
+                            <TextView
+                                android:id="@+id/tvSpeedText1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                android:text="80"
+                                android:textColor="@color/text_black_color"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/tvSpeedText2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                android:text="M P H"
+                                android:textColor="@color/text_black_color"
+                                android:textSize="@dimen/_6sdp" />
+
+
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/pgSpeed"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:indeterminate="false"
+                            android:max="140"
+                            android:progress="100"
+                            android:progressDrawable="@drawable/speed_progress"
+                            app:layout_constraintBottom_toBottomOf="@id/ivSpeed"
+                            app:layout_constraintEnd_toEndOf="@id/ivSpeed"
+                            app:layout_constraintStart_toStartOf="@id/ivSpeed"
+                            app:layout_constraintTop_toTopOf="@id/ivSpeed" />
+
+
+                        <TextView
+                            android:id="@+id/tvDriveLimitText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="center"
+                            android:text="It is too dangerous if you drive \nmore than this bike speed limit. "
+                            android:textColor="@color/text_black_color"
+                            android:textSize="@dimen/_13sdp"
+                            app:layout_constraintBottom_toBottomOf="@id/pgSpeed"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/pgSpeed"
+                            app:layout_constraintTop_toTopOf="@+id/pgSpeed" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tvGuardian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:elevation="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="Guardian"
+                        android:textColor="@color/text_black_color"
+                        android:textSize="@dimen/_15sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/clSpeedMeter" />
+
+                    <LinearLayout
+                        android:id="@+id/llGuardian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:visibility="gone"
+                        android:layout_marginBottom="@dimen/_150sdp"
+                        android:background="@drawable/dialog_bg_low_corners"
+                        android:elevation="12dp"
+                        android:padding="@dimen/_12sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvGuardian">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvGuardian"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="2"
+                            tools:listitem="@layout/item_guardian" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/addGuardian"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/dialog_bg_low_corners"
+                            android:outlineAmbientShadowColor="@color/gradiant1"
+                            android:outlineSpotShadowColor="@color/gradiant1"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/_20sdp"
+                            app:cardElevation="6dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:strokeColor="@color/gradiant1"
+                            app:strokeWidth="1.5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/_8sdp"
+                                android:src="@drawable/add" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

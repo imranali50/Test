@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_camera"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDialogTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_medium"
+                android:text="UnBlock Request"
+                android:textColor="@color/text_black_color"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/iv_close_dialog"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/dialog_cancel" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/gray_line" />
+        <TextView
+            android:id="@+id/txtSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Provide a reason for unblocking your app."
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/_13sdp" />
+
+        <EditText
+            android:id="@+id/etReason"
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/_55sdp"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_unselected"
+            android:hint="Please enter reason"
+            android:imeOptions="actionDone"
+            android:maxLines="2"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:singleLine="false"
+            android:textColor="@color/text_black_color"
+            android:textColorHint="@color/email_hint_color"
+            android:textCursorDrawable="@drawable/black_cursor"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tvSubmitBtn"
+            style="@style/buttonTheme"
+            android:layout_below="@+id/llRegisterMobileField"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/submit" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

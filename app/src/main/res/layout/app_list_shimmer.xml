@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_12sdp"
+    android:background="@drawable/low_corner"
+    android:elevation="4dp"
+    android:padding="@dimen/_9sdp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivGuardianImage"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp"
+        android:scaleType="centerCrop"
+        android:src="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+        app:tint="@color/shimmerColor" />
+
+    <LinearLayout
+        android:id="@+id/llMainContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/ivGuardianImage"
+        app:layout_constraintStart_toEndOf="@+id/ivGuardianImage"
+        app:layout_constraintTop_toTopOf="@+id/ivGuardianImage">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/low_corner"
+            android:backgroundTint="@color/shimmerColor"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:minWidth="@dimen/_100sdp"
+            android:singleLine="true"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tvAppTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/low_corner"
+            android:backgroundTint="@color/shimmerColor"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_vertical"
+            android:minWidth="@dimen/_50sdp"
+            android:textColor="@color/description_color"
+            android:textSize="@dimen/_10sdp" />
+    </LinearLayout>
+
+    <!--    <Switch-->
+    <!--        android:id="@+id/sBlockBtn"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:thumb="@drawable/thumb_selector"-->
+    <!--        android:track="@drawable/track_selector"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/ivGuardianImage"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/ivGuardianImage"/>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

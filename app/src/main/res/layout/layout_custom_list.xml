@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/tvToday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical"
+        android:text="Today"
+        android:textColor="@color/description_color"
+        android:textSize="@dimen/_12sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="#33787878" />
+
+    <TextView
+        android:id="@+id/tvYesterday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_weight="1"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical"
+        android:text="Yesterday"
+        android:textColor="@color/description_color"
+        android:textSize="@dimen/_12sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="#33787878" />
+
+    <TextView
+        android:id="@+id/tvWeekly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_weight="1"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical"
+        android:text="Weekly"
+        android:textColor="@color/description_color"
+        android:textSize="@dimen/_12sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="#33787878" />
+
+    <TextView
+        android:id="@+id/tvMonthly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_weight="1"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center_vertical"
+        android:text="Monthly"
+        android:textColor="@color/description_color"
+        android:textSize="@dimen/_12sdp" />
+</LinearLayout>

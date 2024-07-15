@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg">#E1DEDE</color>
+    <color name="back_card_color">#161616</color>
+    <color name="stroke_color">#333333</color>
+    <color name="res">#ED21C7AD</color>
+
+    <color name="status_bar_color">#F4F4F4</color>
+
+    <color name="gradiant1">#FFDF24</color>
+    <color name="gradiant2">#FFDA02</color>
+    <color name="text_black_color">#1C1C1C</color>
+    <color name="email_hint_color">#BBBBBB</color>
+    <color name="description_color">#787878</color>
+    <color name="dialog_bg_color">#33FFFFFF</color>
+    <color name="filter_bg_color">#FAF9F9</color>
+    <color name="otp_pin_color">#F0F0F0</color>
+    <color name="bottom_nav_bg">#F2F2F2</color>
+    <color name="bottom_nav_bg_stroke">#DFDFDF</color>
+    <color name="nav_text_unselect">#D3D3D3</color>
+
+    <color name="shimmerColor">#C2C2C2</color>
+    <color name="shimmerColor2">#CCC2C2C2</color>
+    <color name="green">#49CC56</color>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PinViewTheme">
+        <attr name="pinViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PinView">
+        <attr name="itemCount" format="integer" />
+        <attr name="itemWidth" format="dimension" />
+        <attr name="itemHeight" format="dimension" />
+        <attr name="itemRadius" format="dimension" />
+        <attr name="itemSpacing" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineColor" format="reference|color" />
+        <attr name="viewType" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="line" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="android:cursorVisible" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="reference|color" />
+        <attr name="android:itemBackground" />
+        <attr name="hideLineWhenFilled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CurvedBottomNavigationView">
+        <attr name="cbn_selectedColor" format="color" />
+        <attr name="cbn_unSelectedColor" format="color" />
+        <attr name="cbn_animDuration" format="integer" />
+        <attr name="cbn_fabElevation" format="dimension" />
+        <attr name="cbn_elevation" format="dimension"/>
+        <attr name="cbn_fabBg" format="color" />
+        <attr name="cbn_bg" format="color" />
+    </declare-styleable>
+    <declare-styleable name="VoicePlayerView">
+        <attr name="viewBackground" format="color" />
+        <attr name="playPauseBackgroundColor" format="color" />
+        <attr name="shareBackgroundColor" format="color" />
+        <attr name="seekBarProgressColor" format="color" />
+        <attr name="seekBarThumbColor" format="color" />
+        <attr name="progressTimeColor" format="color" />
+        <attr name="showShareButton" format="boolean" />
+        <attr name="showTiming" format="boolean" />
+        <attr name="viewCornerRadius" format="float" />
+        <attr name="playPauseCornerRadius" format="float" />
+        <attr name="shareCornerRadius" format="float" />
+        <attr name="shareText" format="string" />
+        <attr name="enableVisualizer" format="boolean" />
+        <attr name="timingBackgroundColor" format="color" />
+        <attr name="visualizationPlayedColor" format="color" />
+        <attr name="visualizationNotPlayedColor" format="color" />
+        <attr name="playProgressbarColor" format="color" />
+
+    </declare-styleable>
+</resources>

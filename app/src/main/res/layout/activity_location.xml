@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LocationActivity">
+
+        <fragment
+            android:id="@+id/mapLocation"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_14sdp"
+            tools:context="com.example.app.MapLocationActivity" />
+
+    <include
+        android:id="@+id/headerLocationTool"
+        layout="@layout/header_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_minus20sdp"
+        android:background="@drawable/background_dialog"
+        android:elevation="30dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Your Location"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/tvMyLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:fontFamily="@font/roboto_regular"
+            android:text="301 , Rachna Society , near Gokul nagar, surat, Gujarat   "
+            android:textColor="@color/description_color"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

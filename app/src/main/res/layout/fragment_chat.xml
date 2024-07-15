@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/status_bar_color"
+    android:paddingTop="@dimen/_60sdp"
+    tools:context=".fragment.ChatFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGuardianChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/_150sdp"
+            tools:listitem="@layout/item_chat_fragment" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerEffect"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/llShimmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <include layout="@layout/app_list_shimmer" />
+
+                <include layout="@layout/app_list_shimmer" />
+
+                <include layout="@layout/app_list_shimmer" />
+
+                <include layout="@layout/app_list_shimmer" />
+
+                <include layout="@layout/app_list_shimmer" />
+
+                <include layout="@layout/app_list_shimmer" />
+
+                <include layout="@layout/app_list_shimmer" />
+
+                <include layout="@layout/app_list_shimmer" />
+
+                <include layout="@layout/app_list_shimmer" />
+
+                <include layout="@layout/app_list_shimmer" />
+
+                <include layout="@layout/app_list_shimmer" />
+
+                <include layout="@layout/app_list_shimmer" />
+
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <TextView
+            android:id="@+id/txtNotFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Please connect to your parent phone"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/_14sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/rvGuardianChat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rvGuardianChat" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

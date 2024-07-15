@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".activity.GuardianCodeActivity">
+
+    <include
+        android:id="@+id/GuardianCodeTool"
+        layout="@layout/header_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:background="@drawable/background_dialog"
+        android:elevation="10dp"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_25sdp"
+        app:layout_constraintBottom_toTopOf="@+id/guardianCodeTitle3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GuardianCodeTool">
+
+        <TextView
+            android:id="@+id/guardianCodeTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Enter the Guardian’s code "
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/_20sdp" />
+
+        <ImageView
+            android:id="@+id/ivImageGuardianCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/guardianCodeTitle1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:src="@drawable/guardian_code_illustrator" />
+
+
+        <com.findmykids.tracker.panda.util.PinView
+            android:id="@+id/guardianCodeView"
+            style="@style/PinWidget.PinView"
+            android:inputType="textCapCharacters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivImageGuardianCode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:cursorVisible="true"
+            android:fontFamily="@font/roboto_bold"
+            android:itemBackground="@color/otp_pin_color"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/_10sdp"
+            app:cursorColor="@color/text_black_color"
+            app:cursorWidth="2dp"
+            app:itemCount="5"
+            app:itemHeight="@dimen/_45sdp"
+            app:itemRadius="@dimen/_5sdp"
+            app:itemSpacing="@dimen/_8sdp"
+            app:itemWidth="@dimen/_35sdp"
+            app:lineColor="@android:color/transparent"
+            app:viewType="rectangle" />
+
+        <TextView
+            android:id="@+id/tvConnect"
+            style="@style/buttonTheme"
+            android:layout_below="@+id/guardianCodeView"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:text="Connect" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/guardianCodeTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="@dimen/_5sdp"
+        android:text="How to get code?"
+        android:textColor="@color/text_black_color"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

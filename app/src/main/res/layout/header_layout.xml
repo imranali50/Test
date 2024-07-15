@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_60sdp">
+
+    <FrameLayout
+        android:id="@+id/flToolBack"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/background_dialog"
+        android:elevation="12dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/arrow_left" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flToolSort"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/background_dialog"
+        android:elevation="12dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/sort" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/toolBarSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Skip"
+        android:textColor="@color/description_color"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/flToolScan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/flToolScan" />
+
+    <FrameLayout
+        android:id="@+id/flToolScan"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:background="@drawable/background_dialog"
+        android:elevation="12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/code_scan" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flToolFilter"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:background="@drawable/background_dialog"
+        android:elevation="12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/filter" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/flToolNotify"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:background="@drawable/background_dialog"
+        android:visibility="gone"
+        android:elevation="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_9sdp"
+            android:src="@drawable/notification_bing" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvNotifyCount"
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_12sdp"
+        android:background="@drawable/background_dialog"
+        android:backgroundTint="#FFDF24"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="1"
+        android:elevation="13dp"
+        android:visibility="gone"
+        android:textColor="@color/text_black_color"
+        android:textSize="@dimen/_6sdp"
+        app:layout_constraintEnd_toEndOf="@+id/flToolNotify"
+        app:layout_constraintTop_toTopOf="@+id/flToolNotify" />
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="@dimen/_50sdp"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent">-->
+
+    <!--        <FrameLayout-->
+    <!--            android:id="@+id/flToolNotification"-->
+    <!--            android:layout_width="@dimen/_35sdp"-->
+    <!--            android:layout_height="@dimen/_35sdp"-->
+    <!--            android:background="@drawable/background_dialog"-->
+    <!--            android:elevation="12dp">-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:padding="@dimen/_8sdp"-->
+    <!--                android:src="@drawable/notification_bing" />-->
+    <!--        </FrameLayout>-->
+
+    <!--    </RelativeLayout>-->
+
+    <TextView
+        android:id="@+id/toolbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Create Profile"
+        android:textColor="@color/text_black_color"
+        android:textSize="@dimen/_16sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

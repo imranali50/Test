@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/status_bar_color"
+    tools:context=".activity.ChatActivity">
+
+    <View
+        android:id="@+id/viewForHeight"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivChatBack"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/chat_back"
+        app:layout_constraintBottom_toBottomOf="@id/viewForHeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/viewForHeight" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivGuardianChatImage"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:src="@drawable/img1"
+        app:layout_constraintBottom_toBottomOf="@+id/viewForHeight"
+        app:layout_constraintStart_toEndOf="@+id/ivChatBack"
+        app:layout_constraintTop_toTopOf="@+id/viewForHeight"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+
+    <TextView
+        android:id="@+id/tvGuardianName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:maxLines="1"
+        android:text="Robert Jack"
+        android:textColor="@color/text_black_color"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@+id/tvOnlineStatus"
+        app:layout_constraintEnd_toStartOf="@+id/flVideoChat"
+        app:layout_constraintStart_toEndOf="@+id/ivGuardianChatImage"
+        app:layout_constraintTop_toTopOf="@id/ivGuardianChatImage" />
+
+    <TextView
+        android:id="@+id/tvOnlineStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:maxLines="1"
+        android:text="Online"
+        android:textColor="@color/description_color"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivGuardianChatImage"
+        app:layout_constraintEnd_toEndOf="@+id/tvGuardianName"
+        app:layout_constraintStart_toStartOf="@+id/tvGuardianName"
+        app:layout_constraintTop_toBottomOf="@id/tvGuardianName" />
+
+    <FrameLayout
+        android:id="@+id/flVideoChat"
+        android:layout_width="@dimen/_32sdp"
+        android:visibility="invisible"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/background_dialog"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewForHeight"
+        app:layout_constraintEnd_toStartOf="@+id/flAudioChat"
+        app:layout_constraintTop_toTopOf="@id/viewForHeight">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/video_chat" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flAudioChat"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:visibility="invisible"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:background="@drawable/background_dialog"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewForHeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewForHeight">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/audio_chat" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/background_permission"
+        android:elevation="9dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewForHeight" />
+
+    <ProgressBar
+        android:id="@+id/progressLoad"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:indeterminate="true"
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/gradiant1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewForHeight" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChatMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/ll_send_message"
+        app:layout_constraintTop_toBottomOf="@id/progressLoad" />
+
+    <LinearLayout
+        android:id="@+id/ll_send_message"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/background_dialog"
+        android:elevation="11dp"
+        android:paddingStart="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_emoji"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/emoji_chat" />
+
+        <com.findmykids.tracker.panda.popup.MenuEditText
+            android:id="@+id/edt_chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fadeScrollbars="false"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Type Here..."
+            android:imeOptions="actionDone"
+            android:inputType="textShortMessage"
+            android:minLines="1"
+            android:scrollbars="none"
+            android:textColor="@color/text_black_color"
+            android:textColorHint="@color/description_color"
+            android:textCursorDrawable="@color/text_black_color"
+            android:textSize="@dimen/_13sdp" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_visi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_record"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/mic_chat"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/menuChatContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_doc"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/attach_chat" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="6dp"
+            android:src="@drawable/send_chat" />
+        <!--            </LinearLayout>-->
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

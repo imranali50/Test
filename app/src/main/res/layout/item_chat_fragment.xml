@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_12sdp"
+    android:background="@drawable/dialog_bg_low_corners"
+    android:elevation="4dp"
+    android:padding="@dimen/_9sdp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivGuardianImage"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+    <LinearLayout
+        android:id="@+id/llChatDesc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/ivGuardianImage"
+        app:layout_constraintEnd_toStartOf="@+id/llChatDate"
+        app:layout_constraintStart_toEndOf="@+id/ivGuardianImage"
+        app:layout_constraintTop_toTopOf="@+id/ivGuardianImage">
+
+        <TextView
+            android:id="@+id/tvChatGroupName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/tvChatLastMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/description_color"
+            android:textSize="@dimen/_11sdp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llChatDate"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/ivGuardianImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivGuardianImage">
+
+        <TextView
+            android:id="@+id/tvLastMessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_vertical|end"
+            android:textColor="@color/email_hint_color"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tvUnReadMessageCount"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/background_dialog"
+            android:backgroundTint="@color/gradiant1"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="1"
+            android:textColor="@color/text_black_color"
+            android:singleLine="true"
+            android:textSize="@dimen/_9sdp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

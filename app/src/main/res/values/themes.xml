@@ -1,0 +1,120 @@
+<resources>
+
+    <style name="Theme.ChildApp" parent="Base.Theme.ChildApp" />
+
+    <style name="Base.Theme.ChildApp" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="colorAccent">@color/gradiant1</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="buttonTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:background">@drawable/gradient_button</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/text_black_color</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="buttonTheme_red">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:background">@drawable/gradient_button_red</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="buttonTheme_white">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:background">@drawable/gradient_button_white</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/text_black_color</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="fab_3_rounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="radioButtonTheme" parent="Base.Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/radiobutton_drawable</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <style name="roundedImageViewRounded2">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_15sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_15sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_15sdp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="roundedImageViewRounded3">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">17dp</item>
+        <item name="cornerSizeTopRight">17dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">17dp</item>
+    </style>
+
+    <style name="roundedImageViewRounded1">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">1%</item>
+    </style>
+    <style name="roundedNavigationView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">30dp</item>
+    </style>
+
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/text_black_color</item>
+        <item name="colorControlActivated">@color/gradiant1</item>
+    </style>
+
+    <style name="Material_Theme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="PinWidget.PinView" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textCursorDrawable">@drawable/pv_invisible_image</item>
+        <item name="android:textSelectHandle">@drawable/pv_invisible_image</item>
+        <item name="android:textSelectHandleLeft">@drawable/pv_invisible_image</item>
+        <item name="android:textSelectHandleRight">@drawable/pv_invisible_image</item>
+    </style>
+
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+        <!--        <item name="behavior_peekHeight">800dp</item>-->
+    </style>
+</resources>

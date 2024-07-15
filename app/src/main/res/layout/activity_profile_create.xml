@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlBG"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical"
+    tools:context=".activity.ProfileCreateActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSub"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_anchor="@id/rlMain"
+                app:layout_constraintBottom_toTopOf="@+id/rlMain"
+                app:layout_constraintEnd_toEndOf="@+id/rlMain"
+                app:layout_constraintStart_toStartOf="@+id/rlMain"
+                app:layout_constraintTop_toTopOf="@+id/rlMain">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:elevation="@dimen/_7sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_user_add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/fab_3_rounded"
+                    app:srcCompat="@color/black" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/editImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edit_img"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/relativeLayout2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/rlMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_55sdp"
+                    android:paddingBottom="@dimen/_15sdp">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/name"
+                        android:textColor="@color/text_black_color"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/llNameField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvName"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/edit_text_unselected"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/userImg"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:src="@drawable/user_icon" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:background="@drawable/gradient_edit_filed" />
+
+                        <EditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/eg_robert_jack"
+                            android:inputType="textPersonName"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black_color"
+                            android:textColorHint="@color/email_hint_color"
+                            android:textCursorDrawable="@drawable/black_cursor"
+                            android:textSize="@dimen/_11sdp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llNameField"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/email"
+                        android:textColor="@color/text_black_color"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/llEmailField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvEmail"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/edit_text_unselected"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/emailImg"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:src="@drawable/email_icon" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:background="@drawable/gradient_edit_filed" />
+
+                        <EditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:focusable="false"
+                            android:hint="@string/eg_robert_gmail_com"
+                            android:inputType="textEmailAddress"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black_color"
+                            android:textColorHint="@color/email_hint_color"
+                            android:textCursorDrawable="@drawable/black_cursor"
+                            android:textSize="@dimen/_11sdp" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvMobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llEmailField"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/mobile_no"
+                        android:textColor="@color/text_black_color"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/llMobileField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvMobile"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/edit_text_unselected"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/phoneImg"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:src="@drawable/phone_icon" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:background="@drawable/gradient_edit_filed" />
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/ccp_loadFullNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            app:ccp_autoDetectCountry="true"
+                            app:ccp_contentColor="@color/text_black_color"
+                            app:ccp_hintExampleNumber="true"
+                            app:ccp_selectionMemoryTag="getFullNumber"
+                            app:ccp_showFlag="false"
+                            app:ccp_showNameCode="false"
+                            app:ccp_textSize="@dimen/_11sdp" />
+
+                        <EditText
+                            android:id="@+id/evMobileField"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:inputType="phone"
+                            android:maxLength="15"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black_color"
+                            android:textColorHint="@color/email_hint_color"
+                            android:textCursorDrawable="@drawable/black_cursor"
+                            android:textSize="@dimen/_11sdp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llMobileField"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/age"
+                        android:textColor="@color/text_black_color"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/llAgeField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAge"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/edit_text_unselected"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ageImg"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:src="@drawable/age_icon" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:background="@drawable/gradient_edit_filed" />
+
+                        <EditText
+                            android:id="@+id/etAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/eg_10"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black_color"
+                            android:textColorHint="@color/email_hint_color"
+                            android:textCursorDrawable="@drawable/black_cursor"
+                            android:textSize="@dimen/_11sdp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llAgeField"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/gender"
+                        android:textColor="@color/text_black_color"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rgGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvGender"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="#024CAF50"
+                        android:orientation="horizontal"
+                        android:theme="@style/MyRadioButton">
+
+                        <RadioButton
+                            android:id="@+id/radioMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            style="@style/radioButtonTheme"
+                            android:checked="true"
+                            android:fontFamily="@font/roboto_regular"
+                            android:padding="@dimen/_8sdp"
+                            android:text="@string/male"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <RadioButton
+                            android:id="@+id/radioFeMale"
+                            style="@style/radioButtonTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:padding="@dimen/_8sdp"
+                            android:text="@string/female"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </RadioGroup>
+
+
+                    <TextView
+                        android:id="@+id/tvCreateProfileBtn"
+                        style="@style/buttonTheme"
+                        android:layout_below="@+id/rgGender"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="@string/create_profile" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

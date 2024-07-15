@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:topRightRadius="@dimen/_30sdp" />
+            <gradient
+                android:angle="-45"
+                android:endColor="#FFDA02"
+                android:startColor="#FFDF24"
+                android:type="linear" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/side_menu"/>
+<!--        <shape android:shape="rectangle">-->
+<!--            <corners android:topRightRadius="@dimen/_30sdp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item>-->
+<!--        <bitmap android:src="@drawable/side_menu"/>-->
+<!--    </item>-->
+</layer-list>

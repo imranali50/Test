@@ -1,0 +1,151 @@
+<resources>
+    <string name="app_name">Panda!</string>
+    <string name="parentApp_name">Kids Control: Family Locator</string>
+
+    <string name="default_notification_channel_id" translatable="false">com.findmykids.tracker.panda</string>
+    <string name="notification_des">This channel is used to show notification when tracking location.</string>
+    <string name="child_app">ChildApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="permissions">Permissions</string>
+    <string name="permission_text">You have previously declined this permission. \n You must approve this permission in \"Permissions\" in the app settings on your device.</string>
+    <string name="phone_number2">Phone number</string>
+
+    //Sign In Activity
+    <string name="email">Email</string>
+    <string name="eg_robert_gmail_com">Eg. robert@gmail.com</string>
+    <string name="password">Password</string>
+    <string name="password_hint_text">********</string>
+    <string name="forgot_password_sign_in">Forgot Password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or">or</string>
+    <string name="sign_in_with_google">Sign In with Google</string>
+    <string name="login_to_access_your_account">Login to access your account</string>
+    <string name="welcome">Welcome</string>
+    <string name="don_t_have_an_account">Don’t have an account?<b><font color="#1C1C1C"> Sign Up</font></b></string>
+
+    //Sign Up Activity
+    <string name="create_an_account">Create an Account</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="name">Name</string>
+    <string name="eg_robert_jack">Eg. Robert Jack</string>
+    <string name="already_have_an_account">Already have an account?<b><font color="#1C1C1C"> Sign In</font></b></string>
+    <string name="mobile_no">Mobile No\t</string>
+    <string name="optional">(optional)</string>
+    <string name="sign_up">Sign Up</string>
+
+    //Forget Password Activity
+    <string name="forgot_password">Forgot Password</string>
+    <string name="enter_your_email_address_to_retrieve_the_password">Enter your email address to retrieve the password.</string>
+    <string name="next">Next</string>
+
+    //Reset Password Activity
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_your_new_password_to_access_this_account">Enter your new password to access this account.</string>
+    <string name="enter_your_new_password">Enter your new password</string>
+    <string name="enter_your_confirm_password">Enter your confirm password</string>
+    <string name="save">Save</string>
+    <string name="eg_10">Eg. 10</string>
+    <string name="create_profile">Create Profile</string>
+
+    //Profile Create Activity
+
+
+    //OTP Screen
+    <string name="enter_email_otp_text">Enter the OTP sent to %s </string>
+    <string name="otp_resend">Didn’t receive the OTP?<b><font color="#1c1c1c"> Resend</font></b></string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="camera">Camera</string>
+    <string name="photo_from_gallery">Photo from Gallery</string>
+
+    //Permission Activity
+    <string name="enable_location">Enable Location</string>
+    <string name="your_parents_won_t_stress_and_you_can_find_your_phone_if_misplaced">If you\'re using it, we need your location to provide accurate directions and real-time updates.</string>
+    <string name="let_s_set_up_geolocation">Let’s set up Geolocation</string>
+    <string name="location_permission">Location Permission</string>
+    <string name="allow">Allow</string>
+    <string name="now_choose_allow_all_the_time">"Now choose Allow all the time "</string>
+    <string name="go_to_setting">Go to setting</string>
+    <string name="allow_audio_recording">Allow Audio Recording</string>
+    <string name="turn_on">Turn on</string>
+    <string name="permit_usage_access">Permit usage access</string>
+    <string name="allow_display_over_other_apps">Allow Display over other apps</string>
+
+    //How to get code Bottom Sheet
+    <string name="how_to_get_code">How to get code?</string>
+    <string name="step_1">Step 1</string>
+    <string name="step_2">Step 2</string>
+    <string name="step_3">Step 3</string>
+    <string name="step_4">Step 4</string>
+    <string name="step_5">Step 5</string>
+    <string name="step_6">Step 6</string>
+    <string name="step_1_text">Take your parent’s phone.</string>
+    <string name="step_2_text">Open Google play or  on it.</string>
+    <string name="step_3_text">Enter “parent’s App name ” and install the app.</string>
+    <string name="step_4_text">After creating profile of your parents you click on Set up child’s phone button.</string>
+    <string name="step_5_text">You will get 3 methods of connecting parent’s App.</string>
+    <string name="step_6_text">Enter the code which displayed on method 3.</string>
+    <string name="alarm_is_provided">Alarm is provided</string>
+    <string name="parents_can_see_where_you_are_and_come_to_rescue_you_deactivate_the_alarm_if_everything_is_fine_with_you">Parents can see where you are and come to rescue you. Deactivate the alarm if everything is fine with you.</string>
+    <string name="deactivate">Deactivate</string>
+    <string name="username">Username</string>
+    <string name="chat">Chat</string>
+    <string name="call">Call</string>
+    <string name="logout">Logout</string>
+    <string name="are_you_sure_want_to_log_out">Are you sure want to log out?</string>
+    <string name="log_out">Log out</string>
+    <string name="cancel">Cancel</string>
+
+
+    //validation
+    <string name="please_enter_email_address">Please enter email address</string>
+    <string name="please_enter_valid_email_address">Please enter valid email address</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="password_must_be_8_to_15_character">Password must be 8 to 15 character</string>
+    <string name="please_enter_name">Please enter name</string>
+    <string name="please_enter_otp">Invalid OTP entered! Please enter the correct OTP</string>
+
+    //googleLogin
+    <string name="default_web_client_id">269314861863-2bn3ocl9ue4bpf0pb6g9ecrtlm18aqg2.apps.googleusercontent.com</string>
+    <string name="age">Age</string>
+    <string name="please_enter_your_age">Please enter your age</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="my_profile">My Profile</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="enter_your_email_address_to_verify_your_account">Enter your email address to verify your account</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="please_enter_parent_s_code">Please enter valid parent’s code</string>
+    <string name="notification_permission">Notification Permission</string>
+    <string name="edit_profile">Edit Profile</string>
+
+    //permission
+    <string name="this_app_uses_your_geolocation_gps_to_provide_personalised_relevant_local_updates_e_g_find_your_phone"><![CDATA[This app uses your Geolocation(Gps) to provide personalised & relevant local updates e.g., Find your phone]]></string>
+    <string name="if_you_re_using_it_we_need_your_location_to_provide_accurate_directions_and_real_time_updates">If you\'re using it, we need your location to provide accurate directions and real-time updates.</string>
+    <string name="knowing_your_location_helps_us_tailor_our_services_to_your_local_context_making_your_experience_more_relevant_and_useful">Knowing your location helps us tailor our services to your local context, making your experience more relevant and useful.</string>
+    <string name="your_location_data_is_only_used_within_the_app_for_the_specified_purposes_and_isn_t_shared_with_others">Your location data is only used within the app for the specified purposes and isn’t shared with others.</string>
+    <string name="this_app_will_have_access_to_your_location_even_when_the_app_is_in_the_background_this_is_recommended_for_guardian_s_for_child_real_time_update">This app will have access to your location even when the app is in the background. This is recommended for Guardian’s (For child real time update).</string>
+    <string name="this_option_is_used_in_real_time_to_provide_you_with_timely_information_and_services">This option is used in real-time to provide you with timely information and services.</string>
+    <string name="microphone_access_enables_you_to_interact_guardian_s_or_parent_with_the_voice_sound_activity_that_one_experienced_around_child"><![CDATA[Microphone access enables you to interact Guardian’s or parent with the voice & sound activity that one experienced around child.]]></string>
+    <string name="your_audio_data_is_processed_in_real_time_to_enable_voice_commands_and_provide_you_with_interactive_experiences">Your audio data is processed in real-time to enable voice commands and provide you with interactive experiences.</string>
+    <string name="notifications_are_used_to_deliver_alerts_and_updates_directly_to_your_device_keep_you_informed_and_provide_timely_updates">Notifications are used to deliver alerts and updates directly to your device. keep you informed and provide timely updates.</string>
+    <string name="certain_features_such_as_bike_speed_alert_sos_alert_require_notification_access_for_optimal_functionality">Certain features, such as [Bike speed alert, SOS alert], require notification access for optimal functionality.</string>
+    <string name="analysing_usage_data_helps_us_understand_your_preferences_and_deliver_a_more_perso_nalised_and_relevant_experience">Analysing usage data helps us understand your preferences and deliver a more perso-nalised and relevant experience.</string>
+    <string name="we_use_usage_information_to_improve_our_services_identify_potential_issues_e_g_optimise_apps_screen_time">We use usage information to improve our services, identify potential issues e.g., Optimise apps screen time</string>
+    <string name="enabling_this_feature_allows_you_to_provide_the_following_benefits_e_g_overlay_content_for_multitasking_quick_actions_etc">Enabling this feature allows you to provide the following benefits.e.g, Overlay content for multitasking, quick actions, etc.</string>
+    <string name="your_screen_may_display_overlays_related_to_this_app_restricted_app_ensuring_a_seamless_user_experience">Your screen may display overlays related to this app(restricted app), ensuring a seamless user experience.</string>
+    <!--    //Notification -->
+
+    <string name="general_channel_title">General Channel</string>
+    <string name="general_channel_description">Channel for general notifications</string>
+    <string name="submit">Submit</string>
+    <string name="please_enter_reason_to_unblock_this_app">Please enter reason to unblock this app</string>
+    <string name="your_parent_is_asking_you_to_call_back">Your parent is asking you to call back!</string>
+    <string name="close">Close</string>
+    <string name="provide_reason_why_you_delete_this_account">Provide reason why you delete this account</string>
+    <string name="please_provide_a_reason_for_the_deletion_of_this_account">Please provide a reason for the deletion of this account.</string>
+        <string name="i_accept_the_terms_of_use_and_privacy_policy">I accept <b><font color="#333333"> the Terms of Use</font></b> and <b><font color="#333333">Privacy Policy.</font></b></string>
+
+</resources>
